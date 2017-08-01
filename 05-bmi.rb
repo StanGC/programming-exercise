@@ -12,6 +12,17 @@ height = gets
 
 # .....
 
-puts "您的 BMI 是: _________"
+bmi = (weight.to_f / (height.to_f / 100) ** 2).round(1)
 
-puts "您的 BMI 结果是: _________(过轻或正常或过重)"
+case bmi
+when 0..18.5
+  result = "過輕"
+when 18.5..24
+  result = "正常"
+else
+  result = "過重"
+end
+
+puts "您的 BMI 是: #{bmi}"
+
+puts "您的 BMI 结果是: #{result}"
