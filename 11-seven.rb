@@ -5,5 +5,6 @@ while ( i <= 100 )
 
   # ....
 
+  puts i if (i % 7 == 0)
   i+=1
 end
