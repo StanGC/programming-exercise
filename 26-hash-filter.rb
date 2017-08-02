@@ -9,8 +9,19 @@ arr = [
 ]
 
 # ....
+def filter(arr)
+  result = []
 
-puts "所有成年人，并由小到大: _________"
+  arr.each do |i|
+    if i["age"] >= 18
+      result.push(i)
+    end
+  end
+
+  result.sort_by { |a| a["age"] }
+end
+
+puts "所有成年人，并由小到大: #{filter(arr)}"
 
 # 答案应该是
 #[
