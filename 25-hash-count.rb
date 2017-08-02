@@ -5,6 +5,8 @@ def count(arr)
 
   arr.each do |i|
     # ...
+    h[i] = arr.count(i)
+    # h[i] ? h[i] += 1 : h[i] = 1
   end
 
   return h # 回传一个 hash
